@@ -97,7 +97,7 @@ foreach( $csv->data as $key => $ligne ){
 // LA LISTE DES MOTS
 
 $html .= "<ul>\n";
-$html .= "<li class='liste'><h2>Mots</h2></li>\n";
+$html .= "<li class='liste titre'><h2>Mots</h2></li>\n";
 $html .= implode("\n", $html_mots);
 $html .= "</ul>\n";
 
@@ -105,7 +105,7 @@ $html .= "</ul>\n";
 // LA LISTE DES DEFINITIONS
 
 $html .= "<ul>\n";
-$html .= "<li class='liste'><h2>Définitions</h2></li>\n";
+$html .= "<li class='liste titre'><h2>Définitions</h2></li>\n";
 ksort($html_definitions);
 $html .= implode("\n", $html_definitions);
 $html .= "</ul>\n";
@@ -114,7 +114,7 @@ $html .= "</ul>\n";
 // LA LISTE DES IMAGES
 
 $html .= "<ul>\n";
-$html .= "<li class='liste'><h2>Images</h2></li>\n";
+$html .= "<li class='liste titre'><h2>Images</h2></li>\n";
 ksort($html_images);
 $html .= implode("\n", $html_images);
 $html .= "</ul>\n";
