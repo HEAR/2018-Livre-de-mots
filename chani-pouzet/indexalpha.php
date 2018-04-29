@@ -34,7 +34,7 @@ foreach( $csv->data as $key => $ligne ){
 
 		echo $ligne["Mot"]." ".$nombre."\n";
 
-		$csv->data[$key]['nbrResultat'] = $nombre;
+		$csv->data[$key]	 = $nombre;
 
 	}
 
