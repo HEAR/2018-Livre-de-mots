@@ -37,13 +37,14 @@ function cmp($a, $b) {
     if ( strtolower($a['Nom']) == strtolower($b['Nom']) ) {
         return 0;
     }
-    return ( strtolower($a['Nom']) < strtolower($b['Nom']) ) ? -1 : 1;
+    return ( strtolower($a['Nom']) < strtolower($b['Nom']) )	 ? -1 : 1;
 }
 
 $texte = "";
 
 // https://secure.php.net/manual/fr/array.sorting.php
 uasort($csv->data, 'cmp');
+
 
 foreach ($csv->data as $key => $ligne) {
 	echo $key . " => " .$ligne['Prénom'] .' '.$ligne['Nom'] ."\n";
@@ -60,6 +61,8 @@ $texte = preg_replace('/[ ]+/', " ", $texte);
 
 $mots = explode(" ", $texte);
 
+
+asort($mots);
 // print_r($mots);
 
 $mots3lettres = array();
@@ -70,7 +73,7 @@ foreach ($mots as $key => $mot) {
 
 foreach ($mots as $key => $mot) {
 	
-	if(strlen($mot) >= 4){ // nombre de lettres
+	if(strlen($mot) >= 3){ // nombre de lettres
 		if( array_key_exists($mot, $mots3lettres) ){
 			$mots3lettres[$mot] ++;
 		}else{
@@ -80,7 +83,7 @@ foreach ($mots as $key => $mot) {
 }
 
 foreach ($mots3lettres as $mot => $nbr) {
-	if($nbr <= 3){
+	if($nbr <= 1){
 		unset( $mots3lettres[$mot] );
 	}
 }

@@ -20,11 +20,15 @@ $xml = "<livre>";
 
 foreach( $csv->data as $ligne ){
 
-	$xml .= "<nom><prenom>".$ligne["Prénom"] . "</prenom> " . $ligne["Nom"]."</nom>\n";
-	
-	$xml .= "<mot>".$ligne["Mot"] . "</mot>\n";
-	
-	$xml .= "<definition>".$ligne["Définition"] . "</definition>\n";
+	$definition = mb_strtolower($ligne["Définition"]);
+	$mot = mb_strtolower($ligne["Mot"]);
+
+	if( strpos($definition, 'artiste') === false && strpos($mot, 'artiste') === false ){
+
+		$xml .= "<nom><prenom>".$ligne["Prénom"] . "</prenom> " . $ligne["Nom"]."</nom>\n";
+		$xml .= "<mot>".$ligne["Mot"] . "</mot>\n";
+		$xml .= "<definition>".$ligne["Définition"] . "</definition>\n";
+	}
 
 }
 
