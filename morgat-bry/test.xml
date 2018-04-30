@@ -1,0 +1,9 @@
+<Root>
+<Table aid:table="table" aid:trows="2" aid:tcols="4" aid5:table="table"> 
+<Cell aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="4" aid:ccolwidth="134">Table heading here</Cell>
+<Cell aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="134">Fruit flies</Cell>
+<Cell aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="134">23</Cell>
+<Cell aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="134">34</Cell>
+<Cell aid:table="cell" aid:crows="1" aid:ccols="1" aid:ccolwidth="134">234.9</Cell>
+</Table>
+</Root>

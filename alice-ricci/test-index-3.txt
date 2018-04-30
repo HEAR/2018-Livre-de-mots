@@ -1,0 +1,13 @@
+<ASCII-MAC>
+<Version:13.1><FeatureSet:InDesign-Roman><ColorTable:=<Black:COLOR:CMYK:Process:0,0,0,1>>
+<DefineParaStyle:mot=<Nextstyle:mot><cTypeface:Bold><cFont:Neue Haas Unica Pro><pShadingColor:Black><pShadingTint:20.000000>>
+<DefineParaStyle:NormalParagraphStyle=<Nextstyle:NormalParagraphStyle>>
+<DefineParaStyle:Index Section Head=<BasedOn:NormalParagraphStyle><Nextstyle:Index Section Head><pSpaceBefore:7.200000><pSpaceAfter:7.200000>>
+<DefineParaStyle:Index Level 1=<BasedOn:NormalParagraphStyle><Nextstyle:Index Level 1><cSize:10.000000><pLeftIndent:28.000000><pFirstLineIndent:-28.000000>>
+<ParaStyle:mot>ABM studio<0x2003>Angela
+<ParaStyle:mot>abri<0x2003>Anna
+<ParaStyle:mot><IndexEntry:=<IndexEntryType:IndexPageEntry><IndexEntryRangeType:kCurrentPage><IndexEntryDisplayString:absense>>absense<0x2003>Laurine
+<ParaStyle:mot><IndexEntry:=<IndexEntryType:IndexPageEntry><IndexEntryRangeType:kCurrentPage><IndexEntryDisplayString:ab<0x00E9>c<0x00E9>daire>>ab<0x00E9>c<0x00E9>daire<0x2003>Quitterie
+<ParaStyle:mot><IndexEntry:=<IndexEntryType:IndexPageEntry><IndexEntryRangeType:kCurrentPage><IndexEntryDisplayString:accessibilit<0x00E9>>>accessibilit<0x00E9><0x2003>Laurine
+<ParaStyle:mot>Acne Studios<0x2003>Julia
+<ParaStyle:mot>Adobe<0x2003>Alice
