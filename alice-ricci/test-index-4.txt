@@ -1,0 +1,17 @@
+<ASCII-MAC>
+<Version:13.1><FeatureSet:InDesign-Roman><ColorTable:=<Black:COLOR:CMYK:Process:0,0,0,1>>
+<DefineParaStyle:mot=<Nextstyle:mot><cTypeface:Bold><cFont:Neue Haas Unica Pro><pShadingColor:Black><pShadingTint:20.000000>>
+<DefineParaStyle:NormalParagraphStyle=<Nextstyle:NormalParagraphStyle>>
+<DefineParaStyle:Index Section Head=<BasedOn:NormalParagraphStyle><Nextstyle:Index Section Head><pSpaceBefore:7.200000><pSpaceAfter:7.200000>>
+<DefineParaStyle:Index Level 1=<BasedOn:NormalParagraphStyle><Nextstyle:Index Level 1><cSize:10.000000><pLeftIndent:28.000000><pFirstLineIndent:-28.000000>>
+<ParaStyle:mot>annihiler<0x2003>Chani
+<ParaStyle:mot>anormal<0x2003>Laurine
+<ParaStyle:mot>ANRT<0x2003>Gaby
+<ParaStyle:mot>anthropoc<0x00E8>ne<0x2003>Chani
+<ParaStyle:mot>anthropologie<0x2003>Anna
+<ParaStyle:mot>anthropologie<0x2003>Chani
+<ParaStyle:mot><IndexEntry:=<IndexEntryType:IndexPageEntry><IndexEntryRangeType:kCurrentPage><IndexEntryDisplayString:anthropologie culturelle>>anthropologie culturelle<0x2003>Chani
+<ParaStyle:mot><IndexEntry:=<IndexEntryType:IndexPageEntry><IndexEntryRangeType:kCurrentPage><IndexEntryDisplayString:anthropomorphisme>>anthropomorphisme<0x2003>Lucie
+<ParaStyle:mot><IndexEntry:=<IndexEntryType:IndexPageEntry><IndexEntryRangeType:kCurrentPage><IndexEntryDisplayString:Antisp<0x00E9>cisme>>Antisp<0x00E9>cisme<0x2003>Alice
+<ParaStyle:mot>Apichatpong, Weerasethakul<0x2009><0x2003>Chani
+<ParaStyle:mot>apocalypse<0x2003>Chani

@@ -1,0 +1,10 @@
+<ASCII-MAC>
+<Version:13.1><FeatureSet:InDesign-Roman><ColorTable:=<Black:COLOR:CMYK:Process:0,0,0,1>>
+<DefineParaStyle:NormalParagraphStyle=<Nextstyle:NormalParagraphStyle>>
+<ParaStyle:NormalParagraphStyle>
+<ParaStyle:NormalParagraphStyle><IndexEntry:=<IndexEntryType:IndexPageEntry><IndexEntryRangeType:kCurrentPage><IndexEntryDisplayString:absense>>absense<0x2003>Laurine
+<ParaStyle:NormalParagraphStyle><IndexEntry:=<IndexEntryType:IndexPageEntry><IndexEntryRangeType:kCurrentPage><IndexEntryDisplayString:ab<0x00E9>c<0x00E9>daire>>ab<0x00E9>c<0x00E9>daire<0x2003>Quitterie
+<ParaStyle:NormalParagraphStyle><IndexEntry:=<IndexEntryType:IndexPageEntry><IndexEntryRangeType:kCurrentPage><IndexEntryDisplayString:accessibilit<0x00E9>>>accessibilit<0x00E9><0x2003>Laurine
+<ParaStyle:NormalParagraphStyle>Acne Studios<0x2003>Julia
+<ParaStyle:NormalParagraphStyle>Adobe<0x2003>Alice
+<ParaStyle:NormalParagraphStyle>Adobe Creative Suite<0x2003>Anna
