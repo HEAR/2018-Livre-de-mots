@@ -6,46 +6,89 @@ function setup() {
 
 	var doc = b.doc();
 
-	var taille = 20;
+
+	b.clear( b.layer( 'calque E' ) );
+
+	var tailleMin = 30;
+	var tailleMax = 200;
+	var taille = tailleMin;
 	var allTextFrames = doc.textFrames;
 
 	var compte = 0;
+	var nbrE = 0;
 
-	b.layer('calque E');
 
-	// for(var i=0;i<allTextFrames.length;i++){
-	for(var i=0;i<1;i++){
-		var tf = allTextFrames[i];
+	for(var i = 1; i <= b.pageCount(); i++){
 
-		b.characters(tf, function(ch, ci) {
+		items = b.items( b.page( i ) );
 
-			if(ch.contents == "e" || ch.contents == "E"){
-				b.println('Character ' + ci + " "+ch.contents);
+		// ON BOUCLE SUR TOUS LES ITEMS DE LA PAGE
+		for(var item = 0; item < items.length ; item++){
 
-				// b.typo(ch,'pointSize',taille);
-				
-				b.fill('Paper');
+			if( items[ item ].name == "conteneur" ){
 
-				var myFrame = b.text(ch.contents, 0, 0, 350, 50);
+				b.characters( b.nameOnPage("conteneur"), function(ch, ci) {
 
-				taille += 0.2;
+					if(ch.contents == "e" || ch.contents == "E"){
+						nbrE ++ ;
+					}
 
-				if(taille >= 50){
-					taille = 30;
-				}
-
-				taille = Math.round(taille * 1000)/1000;
-
-				b.println("->"+taille);
-
-				compte ++;
-
-				if(compte > 300){
-					return false;
-				}
+				});
 			}
-		});
+		}
+	}
+
+
+	b.println("nbrE => "+ nbrE);
+
+
+	var pasTypo = (tailleMax - tailleMin)/nbrE;
+
+	
+	
+	b.layer( 'calque E' );
+
+
+	for(var i = 1; i <= b.pageCount(); i++){
+
+		items = b.items( b.page( i ) );
+
+		// ON BOUCLE SUR TOUS LES ITEMS DE LA PAGE
+		for(var item = 0; item < items.length ; item++){
+
+			if( items[ item ].name == "conteneur" ){
+
+				var ei = 0;
+
+				b.characters( b.nameOnPage("conteneur"), function(ch, ci) {
+
+					if(ch.contents == "e" || ch.contents == "E"){
+					
+						// on attribue la couleur papier aux lettres trouvées
+						ch.fillColor = "Paper";
+
+						// b.typo(ch,'pointSize',taille);
+
+						var xPosCorrection = 25.72/117 * (ei);
+
+						// b.println(xPosCorrection +" "+ei);
+
+						var chPos 	= b.bounds(ch);
+						var myFrame = b.text(ch.contents, chPos.left - xPosCorrection, chPos.bottom - 300 - 8.3 + xPosCorrection, 300, 300);
+						myFrame.textFramePreferences.verticalJustification = VerticalJustification.BOTTOM_ALIGN ;
+
+						b.typo(myFrame,'pointSize',taille);	
+
+						taille += pasTypo;
+						ei++;
+
+					}
+				});
+			}
+		}
 	}
 }
 
 b.go();
+
+
