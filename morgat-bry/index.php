@@ -10,10 +10,15 @@
 require_once "Crossword-master/demo/autoloader.php";
 
 
-$words = ['ubuntu', 'bower', 'seed', 'need', 'hello', 'on', 'hi', ];
+$largeur = 523.276;
+$lignes = 40;
+$colonnes = 50;
 
-$crossword = new \Crossword\Crossword(9, 9, $words);
-$isGenerated = $crossword->generate(\Crossword\Generate\Generate::TYPE_RANDOM);
+
+$words = ['crisco', 'langage', 'symbole', 'bulle', 'humour', 'lettrage', 'ecal' ];
+
+$crossword = new \Crossword\Crossword($lignes, $colonnes, $words);
+$isGenerated = $crossword->generate(\Crossword\Generate\Generate::TYPE_RANDOM, true);
 
 
 $tableau  = $crossword->toArray();
@@ -36,36 +41,72 @@ $tableau  = $crossword->toArray();
 // 
 // !!! https://pagination.com/tutorials/indesign-xml/
 
-$xml = "<Root xmlns:aid=\"http://ns.adobe.com/AdobeInDesign/4.0/\"\nxmlns:aid5=\"http://ns.adobe.com/AdobeInDesign/5.0/\">\n";
-
-$xml .= "<Table aid:table=\"table\" aid:trows=\"9\" aid:tcols=\"9\" aid5:table>\n";
 
 
-for( $y = 0; $y < 9; $y++){
-	for( $x = 0; $x < 9; $x++){
+$txtAID = "<UNICODE-MAC>
+<Version:13><FeatureSet:InDesign-Roman><ColorTable:=<Paper:COLOR:CMYK:Process:0,0,0,0><Black:COLOR:CMYK:Process:0,0,0,1>>
+<DefineParaStyle:lettretableau=<Nextstyle:lettretableau><cSize:4.000000><cFont:Monaco><pTextAlignment:Center><pShadingColor:Black><pShadingTint:20.000000>>
+<DefineParaStyle:NormalParagraphStyle=<Nextstyle:NormalParagraphStyle>>
+<DefineCellStyle:sans=<tCellAttrLeftStrokeWeight:0><tCellAttrRightStrokeWeight:0><tCellAttrTopStrokeWeight:0><tCellAttrBottomStrokeWeight:0>>
+<DefineCellStyle:lettre=<tCellAttrLeftStrokeWeight:3><tCellAttrRightStrokeWeight:3><tCellAttrTopStrokeWeight:3><tCellAttrBottomStrokeWeight:3><tCellLeftStrokeColor:Black><tCellTopStrokeColor:Black><tCellRightStrokeColor:Black><tCellBottomStrokeColor:Black><tcLeftStrokeType:Solid><tcRightStrokeType:Solid><tcTopStrokeType:Solid><tcBottomStrokeType:Solid><tCellAttrLeftStrokeTint:100><tCellAttrRightStrokeTint:100><tCellAttrTopStrokeTint:100><tCellAttrBottomStrokeTint:100><tCellLeftStrokeOverprint:0><tCellRightStrokeOverprint:0><tCellTopStrokeOverprint:0><tCellBottomStrokeOverprint:0><tCellLeftStrokeGapTint:100><tCellRightStrokeGapTint:100><tCellTopStrokeGapTint:100><tCellBottomStrokeGapTint:100><tCellLeftStrokeGapColor:Paper><tCellRightStrokeGapColor:Paper><tCellTopStrokeGapColor:Paper><tCellBottomStrokeGapColor:Paper><tCellStyleParaStyle:lettretableau><tPageItemCellAttrLeftInset:0><tPageItemCellAttrTopInset:0><tPageItemCellAttrRightInset:0><tPageItemCellAttrBottomInset:0>>
+<DefineTableStyle:motcroise=<tOuterLeftStrokeWeight:0><tOuterRightStrokeWeight:0><tOuterTopStrokeWeight:0><tOuterBottomStrokeWeight:0>>";
 
 
-		$xml .= "<Cell aid:table=\"cell\" aid:crows=\"".($y+1)."\" aid:ccols=\"".($x+1)."\" aid:ccolwidth=\"38\">".$tableau[$y][$x]."</Cell>\n";
-		// $xml .= "<Cell aid:table=\"cell\" aid:crows=\"".($y+1)."\" aid:ccols=\"".($x+1)."\" aid:ccolwidth=\"38.772\">".$tableau[$y][$x]."</Cell>\n";
-	
-	}
+$txtAID .= "
+<ParaStyle:NormalParagraphStyle><TableStyle:motcroise><TableStart:$lignes,$colonnes:0:0<tCellDefaultCellType:Text>>";
+// $txtAID .= "<ParaStyle:NormalParagraphStyle><TableStyle:lettretableau>";
+// $txtAID .= "<TableStart:".$lignes.",".$colonnes.":0:0<tCellDefaultCellType:sans>>";
 
-	// $xml .= "\n";
+// on défini les colonnes du tableau
+for( $y=0; $y< $colonnes; $y++){
+	$txtAID .= "<ColStart:<tColAttrWidth:". ($largeur / $colonnes) .">>";
 }
 
-$xml .= "</Table>\n";
-$xml .= "</Root>\n";
+// on énumère les lignes et les cellules
+for( $y = 0; $y < $lignes; $y++){
+
+	$txtAID .= "<RowStart:<tRowAttrHeight:".($largeur / $colonnes).">>";
+
+	for( $x = 0; $x < $colonnes; $x++){
+
+		// si la cellule a un contenu
+		if( !empty( $tableau[$y][$x] ) ){
+
+			$txtAID .= "<CellStyle:lettre><StylePriority:2><CellStart:1,1><ParaStyle:lettretableau>".$tableau[$y][$x]."<CellEnd:>";
+		}
+
+		// si la cellule est vide
+		else{
+			$txtAID .= "<CellStyle:sans><StylePriority:1><CellStart:1,1><CellEnd:>";
+		}
+	}
+	$txtAID.= "<RowEnd:>";
+}
 
 
-file_put_contents("mot-croise.xml", $xml);
+$txtAID .= "<TableEnd:>
+";
 
+// https://secure.php.net/manual/en/mbstring.supported-encodings.php
+file_put_contents("mot-croise-utf16.txt", mb_convert_encoding($txtAID, "UTF-16LE") );
 
-// foreach($tableau as $numLigne => $ligne){
+// $hex = bin2hex($txtAID);
 
-// 	foreach ($ligne as $numColonne => $colonne) {
-		
-// 		print_r($numColonne . ' '. $numLigne .' '. $colonne."\n");
+// $hexDef ="";
 
+// for($i = 0; strlen($hex); $i+=2){
+// 	// echo $hex[$i].$hex[$i+1]."\n";
+// 	// 
+// 	if( !empty($hex[$i].$hex[$i+1]) ){
+
+// 		echo "-> $i ".$hex[$i].$hex[$i+1]."\0\0\n";
+
+// 		$hexDef .= $hex[$i].$hex[$i+1]."\0\0";
+
+// 	}else{
+
+// 		echo "•> $i \n";
 // 	}
-
 // }
+
+// file_put_contents("mot-croise.txt", hex2bin( $hexDef ) );
