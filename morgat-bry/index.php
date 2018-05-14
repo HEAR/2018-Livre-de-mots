@@ -11,8 +11,9 @@ require_once "Crossword-master/demo/autoloader.php";
 
 
 $largeur = 523.276;
-$lignes = 40;
-$colonnes = 50;
+$hauteur = 769.89;
+$lignes = 15;
+$colonnes = 15;
 
 
 $words = ['crisco', 'langage', 'symbole', 'bulle', 'humour', 'lettrage', 'ecal' ];
@@ -65,7 +66,11 @@ for( $y=0; $y< $colonnes; $y++){
 // on énumère les lignes et les cellules
 for( $y = 0; $y < $lignes; $y++){
 
-	$txtAID .= "<RowStart:<tRowAttrHeight:".($largeur / $colonnes).">>";
+	$txtAID .= "<RowStart:<tRowAttrHeight:".($largeur / $colonnes).">";
+
+	$txtAID .= "<tRowAttrMinRowSize:".($largeur / $colonnes)."><tRowAutoGrow:0>>";
+
+
 
 	for( $x = 0; $x < $colonnes; $x++){
 
