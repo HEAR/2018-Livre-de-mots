@@ -1,0 +1,109 @@
+%!Adobe-FontList 1.14
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+MenuName:Minion Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro
+WritingScript:Roman
+OutlineFileName:\MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:217280
+FileModTime:1454501710
+DesignSize:110
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Perec-Blanca
+FamilyName:Perec
+StyleName:Blanca
+MenuName:Perec Blanca
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Perec Blanca
+WritingScript:Roman
+OutlineFileName:\Perec-Blanca.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:166836
+FileModTime:1387933200
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Perec-Negra
+FamilyName:Perec
+StyleName:Negra
+MenuName:Perec Negra
+StyleBits:0
+WeightClass:800
+WidthClass:5
+AngleClass:0
+FullName:Perec Negra
+WritingScript:Roman
+OutlineFileName:\Perec-Negra.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:168544
+FileModTime:1387933200
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PerecLudique-Cubes
+FamilyName:PerecLudique
+StyleName:Cubes
+MenuName:PerecLudique Cubes
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:PerecLudique Cubes
+WritingScript:Roman
+OutlineFileName:\PerecLudique Cubes.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:43968
+FileModTime:1418009602
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PerecLudique-OncleJacques
+FamilyName:PerecLudique
+StyleName:Oncle Jacques
+MenuName:PerecLudique Oncle Jacques
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:PerecLudique Oncle Jacques
+WritingScript:Roman
+OutlineFileName:\PerecLudique Oncle Jacques.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:79112
+FileModTime:1418009730
+%EndFont
+
