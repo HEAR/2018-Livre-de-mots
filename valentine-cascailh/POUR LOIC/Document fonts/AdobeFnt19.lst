@@ -1,0 +1,103 @@
+%!Adobe-FontList 1.19
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Lunchtype-Medium
+FamilyName:Lunchtype22
+StyleName:Medium
+MenuName:Lunchtype22
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Lunchtype22 Medium
+WritingScript:Roman
+OutlineFileName:\Lunchtype22-Medium.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:67448
+FileModTime:1527451092
+NameArray:0,Mac,18,Lunchtype22 Medium
+NameArray:0,Mac,4,Lunchtype22 Medium
+NameArray:0,Win,1,Lunchtype22
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+MenuName:Minion Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro
+WritingScript:Roman
+OutlineFileName:\MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:1527451092
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ScotchRomanMT
+FamilyName:Scotch Roman MT
+StyleName:Regular
+MenuName:Scotch Roman MT
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Scotch Roman MT
+WritingScript:Roman
+OutlineFileName:\ScotchRomanMT.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:33152
+FileModTime:1527451092
+NameArray:0,Mac,4,Scotch Roman MT
+NameArray:0,Win,1,Scotch Roman MT
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:ScotchRomanMTStd-Italic
+FamilyName:Scotch Roman MT Std
+StyleName:Italic
+MenuName:Scotch Roman MT Std
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Scotch Roman MT Std Italic
+WritingScript:Roman
+OutlineFileName:\ScotchRomanMTStd-Italic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:38216
+FileModTime:1527451092
+NameArray:0,Mac,4,Scotch Roman MT Std Italic
+NameArray:0,Win,1,Scotch Roman MT Std
+%EndFont
+
